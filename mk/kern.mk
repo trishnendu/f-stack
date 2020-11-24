@@ -8,7 +8,7 @@
 CWARNFLAGS?=	-Wall -Wnested-externs -Wstrict-prototypes \
 		-Wmissing-prototypes -Wpointer-arith -Wno-inline -Wcast-qual \
 		-Wno-pointer-sign -Wmissing-include-dirs -fdiagnostics-show-option \
-		${CWARNEXTRA}
+		-Wno-format-overflow -Wno-nonnull ${CWARNEXTRA}
 #
 # The following flags are next up for working on:
 #	-Wextra

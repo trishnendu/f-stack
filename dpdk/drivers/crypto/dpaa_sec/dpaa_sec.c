@@ -43,7 +43,7 @@
 #include <dpaa_sec_log.h>
 #include <dpaax_iova_table.h>
 
-enum rta_sec_era rta_sec_era;
+extern enum rta_sec_era rta_sec_era;
 
 int dpaa_logtype_sec;
 

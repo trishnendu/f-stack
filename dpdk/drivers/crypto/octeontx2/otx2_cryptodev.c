@@ -141,6 +141,7 @@ static struct rte_pci_driver otx2_cryptodev_pmd = {
 };
 
 static struct cryptodev_driver otx2_cryptodev_drv;
+uint8_t otx2_cryptodev_driver_id;
 
 RTE_INIT(otx2_cpt_init_log);
 RTE_PMD_REGISTER_PCI(CRYPTODEV_NAME_OCTEONTX2_PMD, otx2_cryptodev_pmd);

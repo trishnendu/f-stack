@@ -97,12 +97,13 @@ static inline phys_addr_t iova_to_phys(struct task_struct *tsk,
 	phys_addr_t offset, phys_addr;
 	struct page *page = NULL;
 	long ret;
+	int locked;
 
 	offset = iova & (PAGE_SIZE - 1);
 
 	/* Read one page struct info */
-	ret = get_user_pages_remote(tsk, tsk->mm, iova, 1,
-				    FOLL_TOUCH, &page, NULL, NULL);
+	ret = get_user_pages_remote(tsk->mm, iova, 1,
+				    FOLL_TOUCH, &page, NULL, &locked);
 	if (ret < 0)
 		return 0;
 
